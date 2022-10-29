@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="myStyle.css">
+    <title>PDAV</title>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="bg-info header1 ">
+        <h1 class="flex items-center justify-center text-center px-5 text-3xl font-bold lg:text-5xl ">Police DAV Public
+            School</h1>
+        <h4 class="flex items-center justify-center text-center px-5 text-2xl lg:text-3xl pt-3">Amritsar, Punjab</h4>
+        <h5 class="flex items-center justify-center text-center px-5 text-1xl lg:text-2xl pt-2">Affiliated by CBSE</h5>
+    </div>
+    <div class="form1 pt-3  ">
+        <div class=" items-center justify-center text-center ">
+            <h2 class=" items-center justify-center text-center px-5 text-2xl font-bold lg:text-5xl  ">Student Details
+            </h2>
+            <br>
+            <br>
+            <form action="/deleteStudentByTeacherPage" method="POST">
+                <div class="text-black form-row flex items-center justify-center text-center">
+                    <div class="form-goup col-md-3 items-center justify-center text-center mx-3">
+                        
+                            <select name="class1" id="classSelected" class="form-control">
+                            <option value=""  selected >choose Class</option>
+                            <option value=""  >12</option>
+                            <option value=""  >11</option>
+                            <option value=""  >10</option>
+                        </select>
+                    </div>
+                    <div class="form-goup col-md-3 items-center justify-center text-center mx-3">
+                        <!-- <label for="inputclass" class="text-white ">Select Section</label> -->
+                        <select name="class1" id="sectionSelected" class="form-control">
+                            <option  selected>choose Section</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <button class=" btn btn-primary">Display Student</button>
+            </form>
+
+            
+            <!-- <h2>student Table</h2> -->
+            <!-- <table>
+                <thead>
+                    <tr>
+                        <th>student Id</th>
+                        <th>student Name</th>
+                        <th>student Class</th>
+                        <th>student Section</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table> -->
+
+        </div>
+    </div>
+    <script>
+       
+        $(document).ready(function(){
+            // console.log('inside script')
+            let data=[
+            {class1:'12',section:'A'},
+            {class1:'12',section:'B'},
+            {class1:'12',section:'C'},
+            {class1:'12',section:'D'},
+            {class1:'12',section:'E'},
+            {class1:'12',section:'F'},
+            {class1:'11',section:'A'},
+            {class1:'11',section:'B'},
+            {class1:'11',section:'C'},
+            {class1:'11',section:'D'},
+            {class1:'11',section:'E'},
+            {class1:'11',section:'F'},
+            {class1:'10',section:'A'},
+            {class1:'10',section:'B'},
+            {class1:'10',section:'C'},
+            {class1:'10',section:'D'},
+            {class1:'10',section:'E'},
+            {class1:'10',section:'F'}
+        ]
+            $('#classSelected').change(function(){
+                debugger
+                $('#sectionSelected').html('<option selected> choose Section</option>')
+                const section= data.filter(m=>m.class1==$('#classSelected').val())
+                section.forEach(element=>{
+                    const option="<option val='"+ element.section+"'>" + element.section + "</option>";
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
