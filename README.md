@@ -9,7 +9,7 @@ CRUD Operation was used to add, delete, update and display any entity like stude
 Technologies used:-
 HTML, CSS, BootStrap, Javascript, MongoDB, express and NodeJS.
 
-<h4>To run this code you just need to run command nodemon index.js in Terminal<h4>
+<h3>To run this code you just need to run command nodemon index.js in Terminal</h3>
 
 - Home Page Screenshot:-
   ![image](https://user-images.githubusercontent.com/107272799/200109956-7aa664f9-0856-4ac0-9e22-a43f346840ea.png)
