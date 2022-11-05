@@ -4,6 +4,7 @@ To do Management of Students and Children in School.
 
 Database used in this website is <b>Mongodb</b>.
 <br>
+Th Main focus whie creating this project is to used CRUD operation.
 CRUD Operation was used to add, delete, update and display any entity like student and Teacher.
 
 Technologies used:-
