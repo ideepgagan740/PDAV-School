@@ -1,5 +1,5 @@
 # PDAV-School
-To do Management of Students and Children in School. 
+To do Management of Students and Teacher in School. 
 
 
 Database used in this website is <b>Mongodb</b>.
